@@ -1,0 +1,21 @@
+[package]
+name = "LBSProjectDiffSAT"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+arbitrary = { version = "1.1.0" }
+
+[dependencies.urandom]
+version = "0.1.0"
+
+[dependencies.guard]
+version = "0.5.1"
+
+[dependencies.cfg-if]
+version = "1.0.0"
+
+[dependencies.execute]
+version = "0.2.11"

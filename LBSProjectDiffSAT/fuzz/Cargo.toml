@@ -1,0 +1,39 @@
+[package]
+name = "LBSProjectDiffSAT-fuzz"
+version = "0.0.0"
+authors = ["Automatically generated"]
+publish = false
+edition = "2018"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+arbitrary = { version = "0.4.6", features = ["derive"] }
+
+[dependencies.LBSProjectDiffSAT]
+path = ".."
+
+[dependencies.urandom]
+version = "0.1.0"
+
+[dependencies.guard]
+version = "0.5.1"
+
+[dependencies.cfg-if]
+version = "1.0.0"
+
+
+[dependencies.execute]
+version = "0.2.11"
+
+# Prevent this from interfering with workspaces
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "fuzz_target_1"
+path = "fuzz_targets/fuzz_target_1.rs"
+test = false
+doc = false

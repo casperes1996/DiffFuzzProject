@@ -1,0 +1,18 @@
+[package]
+name = "LBSProjectDiffRBTree"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+arbitrary = { version = "1", features = ["derive"] }
+
+[dependencies.urandom]
+version = "0.1.0"
+
+[dependencies.rbtset]
+version = "1.0.2"
+
+[dependencies.rb_tree]
+version = "0.5.0"

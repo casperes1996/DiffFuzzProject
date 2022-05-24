@@ -1,0 +1,32 @@
+[package]
+name = "LBSProjectDiffRBTree-fuzz"
+version = "0.0.0"
+authors = ["Automatically generated"]
+publish = false
+edition = "2018"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+arbitrary = { version = "1", features = ["derive"] }
+
+[dependencies.LBSProjectDiffRBTree]
+path = ".."
+
+[dependencies.rbtset]
+version = "1.0.2"
+
+[dependencies.rb_tree]
+version = "0.5.0"
+
+# Prevent this from interfering with workspaces
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "fuzz_target_1"
+path = "fuzz_targets/fuzz_target_1.rs"
+test = false
+doc = false
