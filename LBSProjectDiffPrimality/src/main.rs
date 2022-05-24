@@ -1,11 +1,13 @@
 #![allow(non_snake_case)]
-use is_prime::*;
 use arbitrary::*;
+use is_prime::*;
 
 fn main() -> Result<()> {
     let mut iteration = 0;
     loop {
-        if iteration %1000 == 0 {println!("Iteration number: {}", iteration);}
+        if iteration % 1000 == 0 {
+            println!("Iteration number: {}", iteration);
+        }
         let buffer = generate_random_buffer(8);
         let mut u = Unstructured::new(&buffer);
 
@@ -16,8 +18,8 @@ fn main() -> Result<()> {
         if res_1_bool != res_2_bool {
             println!("---------------------------");
             println!("Test result is: {}", data);
-            println!("Program one said: {}", res_1_bool);    
-            println!("Program two said: {}", res_2_bool);    
+            println!("Program one said: {}", res_1_bool);
+            println!("Program two said: {}", res_2_bool);
             println!("---------------------------");
         }
         assert_eq!(res_1_bool, res_2_bool);
@@ -85,10 +87,9 @@ pub fn miller_rabin(number: u64, bases: &[u64]) -> u64 {
     0
 }
 
-
 pub fn generate_random_buffer(size: usize) -> Vec<u8> {
     let mut rng = urandom::new();
-    let mut buff = vec![0u8;size];
+    let mut buff = vec![0u8; size];
     rng.fill_bytes(&mut buff);
     //println!("{:?}", buff);
     return buff;

@@ -1,6 +1,6 @@
 #![allow(non_snake_case)]
-use execute::Execute;
 use arbitrary::Unstructured;
+use execute::Execute;
 use std::process::{Command, Stdio};
 use LBSProjectDiffSAT::*;
 #[macro_use]
