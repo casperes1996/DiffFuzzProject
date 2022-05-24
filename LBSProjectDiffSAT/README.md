@@ -6,7 +6,7 @@ Furthermore, for calling SAT solvers with .cnf files we wanted to be able to qui
 Therefore there is a volumeSetup.sh script that sets up a Ram Disk (script is to be run on macOS. A Linux version can be adapted with mounting a tmpfs volume). It is expected this folder exists before running the fuzzer. If you do not want to run this in a RAM Disk, you can just make the folder as a regular mkdir directory.
 
 After all of that you can simply use
-cargo run main
+cargo run main/cargo fuzz run fuzz_target_1
 to run the fuzzer on the SAT instances. 
 
 To tear down the Ram Disk again (if created with the macOS volumeSetup.sh script) you can simply run the script again. It looks if the directory is there or not and changes mode from create to reclaim based on it
