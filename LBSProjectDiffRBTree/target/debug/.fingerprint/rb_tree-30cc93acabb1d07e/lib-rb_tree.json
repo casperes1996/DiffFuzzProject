@@ -1,1 +1,0 @@
-{"rustc":819094392048745304,"features":"[\"default\", \"map\", \"queue\", \"set\"]","target":10973484821984814499,"profile":12637318739757120569,"path":13536257993743650024,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/rb_tree-30cc93acabb1d07e/dep-lib-rb_tree"}}],"rustflags":[],"metadata":16712938282929597228,"config":2202906307356721367,"compile_kind":0}
