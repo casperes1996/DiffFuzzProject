@@ -12,7 +12,7 @@ fuzz_target!(|dimac_input: Module| {
         println!("{}",dimac_input.output);
         generate_cnf_file_module(dimac_input, I);
         
-        let pathToInput = format!("/workspaces/LanguageBasedSecurity/LBSProjectDiffSAT/FuzzVolume/inputFile{}.cnf", I);
+        let pathToInput = format!("/workspaces/DiffFuzzProject/LBSProjectDiffSAT/FuzzVolume/inputFile{}.cnf", I);
         
         let mut splr = Command::new(&"splr");
         splr.arg("-o");

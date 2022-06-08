@@ -16,7 +16,7 @@ pub fn main() -> std::io::Result<()> {
 
         // We have generated the cnf
         let pathToInput = format!(
-            "/workspaces/LanguageBasedSecurity/LBSProjectDiffSAT/FuzzVolume/inputFile{}.cnf",
+            "/workspaces/DiffFuzzProject/LBSProjectDiffSAT/FuzzVolume/inputFile{}.cnf",
             i
         );
         // Run SPLR
